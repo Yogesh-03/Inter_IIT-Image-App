@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_animation_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_blur_on_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_crop_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_invert_colors_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_baseline_photo_filter_24.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/item_selector.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/round_corner.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/sign_in_btn_background.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/drawable/signup_dialgo_background.xml" value="0.2265" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout-land/fragment_blur.xml" value="0.1966490299823633" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/activity_home.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/activity_image_edit.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/activity_main.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/bottom_sheet_signup.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_blur.xml" value="0.2" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_bottom_sheet_signup_frag.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_color.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_effects.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_filter.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_home.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/fragment_profile.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/image_view.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/layout/provider_paths.xml" value="0.21195652173913043" />
+        <entry key="..\:/PhotoX/app/src/main/res/menu/bottom_nav_edit_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/PhotoX/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/PhotoX/app/src/main/res/menu/image_options_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/PhotoX/app/src/main/res/xml/provider_paths.xml" value="0.21195652173913043" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

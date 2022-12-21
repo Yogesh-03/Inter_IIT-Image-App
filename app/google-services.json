@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "789160466032",
+    "project_id": "photox-b53f4",
+    "storage_bucket": "photox-b53f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789160466032:android:df6f374a7a7d707203c6b5",
+        "android_client_info": {
+          "package_name": "com.example.photox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789160466032-1podtp55uddi7mp9rq8dkdfqq5rb06bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCltUenqSUFZTN0L-a45PBzUhE-Va0j2xM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789160466032-1podtp55uddi7mp9rq8dkdfqq5rb06bd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

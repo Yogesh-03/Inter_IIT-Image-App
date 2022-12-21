@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/blurButton"
+        android:title="Blur"
+        android:icon="@drawable/ic_baseline_blur_on_24"/>
+    <item android:id="@+id/cropButton"
+        android:title="Crop"
+        android:icon="@drawable/ic_baseline_crop_24"/>
+    <item android:id="@+id/filterButton"
+        android:title="Filter"
+        android:icon="@drawable/ic_baseline_photo_filter_24"/>
+    <item android:id="@+id/colorButton"
+        android:icon="@drawable/ic_baseline_invert_colors_24"
+        android:title="Color"/>
+    <item android:id="@+id/effectsButton"
+        android:icon="@drawable/ic_baseline_animation_24"
+        android:title="Effects"/>
+
+
+</menu>
