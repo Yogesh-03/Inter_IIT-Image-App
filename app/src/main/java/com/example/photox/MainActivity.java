@@ -2,7 +2,9 @@ package com.example.photox;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,21 @@ public class MainActivity extends AppCompatActivity {
     TextView clickhere;
     Button signInBtn;
     FirebaseAuth mAuth;
+    String prevStarted = "yes";
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(prevStarted, Boolean.TRUE);
+            editor.apply();
+        } else {
+            moveToSecondary();
+        }
+    }
+
 
 
     @Override
@@ -37,15 +54,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Getting clicked on the text click here, if don't have a ccount
-        clickhere.setOnClickListener(new View.OnClickListener() {
+        /*clickhere.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-              /*  File directoryToStore;
+              *//*  File directoryToStore;
                 directoryToStore = getBaseContext().getExternalFilesDir("TestFolder");
                 if (!directoryToStore.exists()) {
                     if (directoryToStore.mkdir()) ; //directory is created;
-                }*/
+                }*//*
 
                 // creating bottom sheet Fragment
                 bottom_sheet_signup_frag bottom_sheet_signup_frag = new bottom_sheet_signup_frag();
@@ -53,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
-        });
+        });*/
+    }
+
+
+    public void moveToSecondary(){
+        // use an intent to travel from one activity to another.
+        Intent intent = new Intent(this,HomeActivity.class);
+        startActivity(intent);
     }
 }

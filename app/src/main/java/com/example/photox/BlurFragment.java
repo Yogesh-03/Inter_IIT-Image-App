@@ -8,9 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.slider.RangeSlider;
 import com.google.android.material.slider.Slider;
@@ -21,10 +24,11 @@ import com.google.android.material.slider.Slider;
  * create an instance of this fragment.
  */
 public class BlurFragment extends Fragment {
-    float sclae, radius;
+
     Slider scaleSlider;
     RangeSlider sliderRadius;
     ItemViewModel viewModel;
+    TextView resetBlur;
 
 
     @Override
@@ -36,9 +40,19 @@ public class BlurFragment extends Fragment {
         // Assigning ID's to Views
         scaleSlider = v.findViewById(R.id.sliderBlurScale);
         sliderRadius = v.findViewById(R.id.sliderBlurRadius);
+        resetBlur = v.findViewById(R.id.resetBlur);
 
         //Creating a viewModel Object
         viewModel = new ViewModelProvider(requireActivity()).get(ItemViewModel.class);
+
+
+        resetBlur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                scaleSlider.setValue(0f);
+                sliderRadius.setValues(0f);
+            }
+        });
 
         //Adding data to ViewModel class
         // When slider value changes
@@ -49,13 +63,11 @@ public class BlurFragment extends Fragment {
                 viewModel.setScale(value);
                 //String string = String.valueOf(value);
                 //Log.d("Value", string);
-
-
             }
         });
 
 
-        // When slider value changes
+        // When slider Radius value changes
         sliderRadius.addOnChangeListener(new RangeSlider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull RangeSlider slider, float value, boolean fromUser) {

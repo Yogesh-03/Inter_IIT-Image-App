@@ -14,12 +14,29 @@
         android:layout_marginTop="13dp"
         android:layout_weight="0.5"
         android:text="Colors"
+
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/manjorant_regular"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resetColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:fontFamily="@font/manjorant_regular"
+        android:text="Reset"
+        android:layout_marginTop="13dp"
+        android:textAlignment="center"
+        android:layout_marginRight="18dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -39,9 +56,9 @@
             android:layout_height="18dp"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:fontFamily="@font/manjorant_regular"
             android:text="Saturation"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -50,8 +67,12 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:contentDescription="Slider"
+            app:thumbColor="@color/purple"
+            app:trackColorActive="@color/light_gray"
             android:theme="@style/Theme.custom"
             android:valueFrom="0.0"
+            android:stepSize="0.01"
+            app:tickVisible="false"
             android:valueTo="5.0" />
     </LinearLayout>
 
@@ -72,9 +93,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:fontFamily="@font/manjorant_regular"
             android:text="Opacity"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -83,8 +104,13 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:contentDescription="Slider"
+            app:thumbColor="@color/purple"
+            app:trackColorActive="@color/light_gray"
             android:theme="@style/Theme.custom"
             android:valueFrom="0"
+            android:value="255"
+            android:stepSize="1"
+            app:tickVisible="false"
             android:valueTo="255" />
     </LinearLayout>
 
@@ -106,8 +132,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="Contrast"
+            android:fontFamily="@font/manjorant_regular"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -116,8 +142,13 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:contentDescription="Slider"
+            app:thumbColor="@color/purple"
+            app:trackColorActive="@color/light_gray"
             android:theme="@style/Theme.custom"
             android:valueFrom="0.0"
+            android:value="1"
+            android:stepSize="0.05"
+            app:tickVisible="false"
             android:valueTo="5.0" />
     </LinearLayout>
 
@@ -137,8 +168,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Brightness"
+            android:fontFamily="@font/manjorant_regular"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_gravity="center"/>
@@ -148,8 +179,13 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:contentDescription="Slider"
+            app:thumbColor="@color/purple"
+            app:trackColorActive="@color/light_gray"
             android:theme="@style/Theme.custom"
             android:valueFrom="-255"
+            android:value="0"
+            android:stepSize="0.05"
+            app:tickVisible="false"
             android:valueTo="255" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

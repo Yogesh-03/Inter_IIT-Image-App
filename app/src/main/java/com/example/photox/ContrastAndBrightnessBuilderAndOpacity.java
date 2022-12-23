@@ -6,7 +6,7 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 
-public class ContrastAndBrightnessBuilder {
+public class ContrastAndBrightnessBuilderAndOpacity {
 
     /**
      *
@@ -15,7 +15,7 @@ public class ContrastAndBrightnessBuilder {
      * @param brightness -255..255 0 is default
      * @return new bitmap
      */
-    public static Bitmap changeBitmapContrastBrightness(Bitmap bmp, float contrast, float brightness)
+    public static Bitmap changeBitmapContrastBrightness(Bitmap bmp, float contrast, float brightness,int opac)
     {
         ColorMatrix cm = new ColorMatrix(new float[]
                 {
@@ -31,6 +31,7 @@ public class ContrastAndBrightnessBuilder {
 
         Paint paint = new Paint();
         paint.setColorFilter(new ColorMatrixColorFilter(cm));
+        paint.setAlpha(opac);
         canvas.drawBitmap(bmp, 0, 0, paint);
 
         return ret;

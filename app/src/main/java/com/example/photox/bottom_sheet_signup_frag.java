@@ -38,6 +38,7 @@ import java.util.concurrent.Executor;
  * create an instance of this fragment.
  */
 public class bottom_sheet_signup_frag extends BottomSheetDialogFragment {
+
     FirebaseAuth mAuth;
     Button signUp;
     EditText email, pass;
@@ -46,23 +47,26 @@ public class bottom_sheet_signup_frag extends BottomSheetDialogFragment {
     FirebaseFirestore db;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_bottom_sheet_signup_frag, container, false);
-        mAuth = FirebaseAuth.getInstance();
+
+        //Assigning views by id's
         signUp = v.findViewById(R.id.signUpBtn);
-        email =v.findViewById(R.id.userEmailSignUp);
-        pass = v.findViewById(R.id.userPasswordSignUp);
+        //email =v.findViewById(R.id.userEmailSignUp);
+        //pass = v.findViewById(R.id.userPasswordSignUp);
 
-         emailStr = email.getText().toString().trim();
-         passStr = pass.getText().toString().trim();
+         //emailStr = email.getText().toString().trim();
+         //passStr = pass.getText().toString().trim();
 
-        db = FirebaseFirestore.getInstance();
+        //Getting instance fro firebase
+        //mAuth = FirebaseAuth.getInstance();
+        //db = FirebaseFirestore.getInstance();
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        //Getting clicked on Sing Up Button
+       /* signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (email.getEditableText().toString().trim().isEmpty()){
@@ -79,23 +83,23 @@ public class bottom_sheet_signup_frag extends BottomSheetDialogFragment {
                             .show();
 
                 } else {
-                    registerUser();
+                    //registerUser();
                 }
             }
 
 
-        });
+        });*/
 
         return v;
     }
 
-    private void registerUser() {
+    /*private void registerUser() {
         mAuth.signInWithEmailAndPassword(email.getText().toString().trim(), pass.getText().toString().trim())
                 .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         FirebaseUser User = mAuth.getCurrentUser();
-                        /*if (task.isSuccessful()) {
+                        *//*if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithEmail:success");
                            // updateUI(user);
@@ -106,7 +110,7 @@ public class bottom_sheet_signup_frag extends BottomSheetDialogFragment {
                             //Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
                             //        Toast.LENGTH_SHORT).show();
                             //updateUI(null);
-                        }*/
+                        }*//*
                         // Create a new user with a first and last name
 
 
@@ -171,12 +175,12 @@ public class bottom_sheet_signup_frag extends BottomSheetDialogFragment {
 
                     }
                 });
-               /* .addOnFailureListener(new OnFailureListener() {
+               *//* .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(getContext(), "Errror"+e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
-                });*/
-    }
+                });*//*
+    }*/
 
 }

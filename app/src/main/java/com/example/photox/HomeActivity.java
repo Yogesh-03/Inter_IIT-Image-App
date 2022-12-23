@@ -40,9 +40,9 @@ public class HomeActivity extends AppCompatActivity {
                         fragment = new HomeFragment();
                         break;
 
-                    case R.id.bottomNavPofile:
+                    /*case R.id.bottomNavPofile:
                         fragment = new ProfileFragment();
-                        break;
+                        break;*/
                 }
                 assert fragment != null;
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer, fragment).commit();

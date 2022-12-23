@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //Assigning view their id's
         recyclerView = v.findViewById(R.id.recyclerImages);
         imageImport = v.findViewById(R.id.imageImport);
         imageCamera = v.findViewById(R.id.imageImportCamera);
@@ -76,6 +77,7 @@ public class HomeFragment extends Fragment {
 
         recyclerImageAdapter = new RecyclerImageAdapter(getContext(), arrImages);
 
+        //Getting clicked on gallery import image button (top left corner)
         imageCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,9 +87,7 @@ public class HomeFragment extends Fragment {
         });
 
 
-
-
-
+        //Getting clicked on camera import image button (top right corner)
         imageImport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

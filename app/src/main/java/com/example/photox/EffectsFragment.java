@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.android.material.slider.Slider;
 
@@ -18,8 +19,10 @@ import com.google.android.material.slider.Slider;
  * create an instance of this fragment.
  */
 public class EffectsFragment extends Fragment {
+
     Slider temp, sharp;
     ItemViewModel itemViewModel;
+    TextView resetEffects;
 
 
     @Override
@@ -28,12 +31,23 @@ public class EffectsFragment extends Fragment {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_effects, container, false);
 
-        itemViewModel = new ViewModelProvider(requireActivity()).get(ItemViewModel.class);
-
+        //Assigning view their id's
         temp = v.findViewById(R.id.sliderTempereature);
         sharp = v.findViewById(R.id.sliderSharpness);
+        resetEffects = v.findViewById(R.id.resetEffects);
+
+        //crating view model obj
+        itemViewModel = new ViewModelProvider(requireActivity()).get(ItemViewModel.class);
+
+        resetEffects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                temp.setValue(0f);
+            }
+        });
 
 
+        //when tempereature value changes
         temp.addOnChangeListener(new Slider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
@@ -41,6 +55,7 @@ public class EffectsFragment extends Fragment {
             }
         });
 
+        //when sharpness value changes
         sharp.addOnChangeListener(new Slider.OnChangeListener() {
             @Override
             public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {

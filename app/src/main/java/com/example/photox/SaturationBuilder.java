@@ -8,7 +8,7 @@ import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 
 public class SaturationBuilder {
-    public static Bitmap Saturate(Context context, Bitmap image, float f){
+    public static Bitmap Saturate( Bitmap image, float f){
 
         int width, height;
          width = Math.round(image.getWidth());
@@ -18,7 +18,7 @@ public class SaturationBuilder {
         Canvas c = new Canvas(bmpGrayscale);
         Paint paint = new Paint();
         ColorMatrix cm = new ColorMatrix();
-        cm.setSaturation(f);
+        cm.setSaturation(0);
         ColorMatrixColorFilter mat = new ColorMatrixColorFilter(cm);
         paint.setColorFilter(mat);
         c.drawBitmap(image, 0, 0, paint);

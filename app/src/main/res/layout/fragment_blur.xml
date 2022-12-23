@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".BlurFragment"
     android:background="@drawable/signup_dialgo_background">
 
@@ -14,20 +14,37 @@
         android:layout_weight="0.5"
         android:text="Blur"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/purple"
         android:textSize="20sp"
         android:layout_marginTop="13dp"
         android:textStyle="bold"
+        android:fontFamily="@font/manjorant_regular"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+    <TextView
+        android:id="@+id/resetBlur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:fontFamily="@font/manjorant_regular"
+        android:text="Reset"
+        android:layout_marginTop="13dp"
+        android:textAlignment="center"
+        android:layout_marginRight="18dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5">
@@ -40,7 +57,7 @@
             android:layout_weight="1"
             android:text="Scale"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:fontFamily="@font/manjorant_regular"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -50,7 +67,8 @@
             android:layout_height="wrap_content"
             android:contentDescription="Slider"
             app:thumbColor="@color/purple"
-
+            android:stepSize="0.01"
+            app:tickVisible="false"
             app:trackColorActive="@color/light_gray"
             android:theme="@style/Theme.custom"
             android:valueFrom="0.0"
@@ -61,10 +79,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
@@ -75,22 +95,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:fontFamily="@font/manjorant_regular"
+            android:text="Radius"
             android:textAlignment="center"
-            android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Radius" />
+            android:textStyle="bold" />
+
         <com.google.android.material.slider.RangeSlider
             android:id="@+id/sliderBlurRadius"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:stepSize="1.0"
             android:theme="@style/Theme.custom"
-            app:thumbColor="@color/purple"
-            app:trackColorActive="@color/light_gray"
-            android:valueFrom="1.0"
+            android:valueFrom="0.0"
             android:valueTo="10.0"
-            android:stepSize = "1.0"
-            />
+            app:thumbColor="@color/purple"
+            app:trackColorActive="@color/light_gray" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
